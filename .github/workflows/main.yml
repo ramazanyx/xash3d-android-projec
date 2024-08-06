@@ -28,7 +28,7 @@ jobs:
            export ANDROID_NDK_HOME=android-ndk-r10e/
            ./build.sh
    - name: Upload artifacts
-     uses: actions/upload-artifact@v3
+     uses: actions/upload-artifact@v4
      with:
           name: android-compiled
           path: libs/
