@@ -46,7 +46,7 @@ XASH3D_CONFIG := $(APPLICATIONMK_PATH)/xash3d_config.mk
 
 ifeq ($(XASH_64BIT),1)
 #APP_ABI := x86_64 arm64-v8a
-APP_ABI := arm64-v8a
+APP_ABI := arm64-v8a armeabi-v7a-hard
 else
 APP_ABI := x86 armeabi-v7a-hard
 endif
