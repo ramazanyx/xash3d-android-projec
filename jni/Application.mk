@@ -15,7 +15,7 @@ APP_PLATFORM := android-15
 #NDK_TOOLCHAIN_VERSION := clang
 
 CFLAGS_OPT :=  -O3 -fomit-frame-pointer -ggdb -funsafe-math-optimizations -ftree-vectorize -fgraphite-identity -floop-interchange -funsafe-loop-optimizations -finline-limit=256 -pipe
-CFLAGS_OPT_ARM := -mthumb -mfpu=neon -mcpu=cortex-a53 -DVECTORIZE_SINCOS -fPIC -DHAVE_EFFICIENT_UNALIGNED_ACCESS
+CFLAGS_OPT_ARM := -mthumb -mfpu=neon -mcpu=cortex-a9 -pipe -DVECTORIZE_SINCOS -fPIC -DHAVE_EFFICIENT_UNALIGNED_ACCESS
 CFLAGS_OPT_ARM64 := -mcpu=cortex-a53 -DVECTORIZE_SINCOS
 CFLAGS_OPT_X86_64 := -funroll-loops
 CFLAGS_OPT_X86 := -mtune=atom -march=atom -mssse3 -mfpmath=sse -funroll-loops -DVECTORIZE_SINCOS -DHAVE_EFFICIENT_UNALIGNED_ACCESS
@@ -46,7 +46,7 @@ XASH3D_CONFIG := $(APPLICATIONMK_PATH)/xash3d_config.mk
 
 ifeq ($(XASH_64BIT),1)
 #APP_ABI := x86_64 arm64-v8a
-APP_ABI := arm64-v8a
+APP_ABI := arm64-v8a armeabi-v7a-hard
 else
 APP_ABI := x86 armeabi-v7a-hard
 endif
