@@ -6,7 +6,10 @@
 	url = https://github.com/tyabus/nanogl
 [submodule "jni/src/Xash3D/xash3d"]
 	path = jni/src/Xash3D/xash3d
-	url = https://github.com/hasandramali/xash3d
+	url = https://github.com/ramazanyx/xash3d.git
 [submodule "jni/src/hlsdk-portable"]
 	path = jni/src/hlsdk-portable
 	url = https://github.com/FWGS/hlsdk-portable
+[submodule "jni/src/nanogl"]
+	path = jni/src/nanogl
+	url = https://github.com/ramazanyx/nanogl.git
